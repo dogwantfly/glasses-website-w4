@@ -1,0 +1,30 @@
+//系列鏡框選單
+.funtional-menu-list__item{
+    &:nth-last-of-type(n+2) a{
+        border-bottom: 16px solid transparent;
+        @include pad{
+            border-bottom: 8px solid transparent;
+        }
+        @include phone{
+            border-bottom: 4px solid transparent;
+        }
+        &:hover{
+            border-bottom: 16px solid $color-primary;
+            @include pad{
+                border-bottom: 8px solid $color-primary;
+            }
+            @include phone{
+                border-bottom: 4px solid $color-primary;
+            }
+        }
+    }
+    &:nth-of-type(3) a{
+        border-bottom: 16px solid $color-primary;
+        @include pad{
+            border-bottom: 8px solid $color-primary;
+        }
+        @include phone{
+            border-bottom: 4px solid $color-primary;
+        }
+    }
+}

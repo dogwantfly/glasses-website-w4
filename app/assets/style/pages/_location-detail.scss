@@ -1,0 +1,32 @@
+
+//分店資訊
+.location-content{
+    display: flex;
+    justify-content: space-between;
+    @include pad{
+        flex-direction: column;
+    }
+}
+.store-list__item--detail{
+    margin-bottom: 0;
+    @include pad{
+        .location-picture,.store-info-container{
+            width: 48.21%;
+            @include phone{
+                width: 100%;
+            }
+        }
+        .store-info-container{
+            border: 1px solid #00000020;
+        }
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        margin-bottom: 32px;
+    }
+    @include phone{
+        flex-direction: column;
+    }
+}

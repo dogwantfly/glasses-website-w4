@@ -1,0 +1,105 @@
+//系列鏡框選單
+.sunglasses-menu-list__item{
+    &:nth-of-type(1) a{
+        border-bottom: 16px solid transparent;
+        @include pad{
+            border-bottom: 8px solid transparent;
+        }
+        @include phone{
+            border-bottom: 4px solid transparent;
+        }
+        &:hover{
+            border-bottom: 16px solid $color-primary;
+            @include pad{
+                border-bottom: 8px solid $color-primary;
+            }
+            @include phone{
+                border-bottom: 4px solid $color-primary;
+            }
+        }
+    }
+    &:nth-of-type(2) a{
+        border-bottom: 16px solid $color-primary;
+        @include pad{
+            border-bottom: 8px solid $color-primary;
+        }
+        @include phone{
+            border-bottom: 4px solid $color-primary;
+        }
+    }
+}
+//系統鏡框 banner
+.sunglasses-photo{
+    background-image: url('./../img/banner-3.png');
+    &:last-child{
+        margin-right: 0;
+        background-image: url('./../img/banner-4.png');
+    }
+}
+//系列鏡框 產品列表
+.sunglasses-product-list__item{
+    width: 32.08%;
+    &:nth-of-type(n+4){
+        margin-bottom: 88px;
+        @include pad{
+            margin-bottom: 72px;
+        }
+    }
+    &:nth-of-type(n+7){
+        display: none;
+        @include pad{
+            display: block;
+        }
+    }
+    &:nth-of-type(n+9){
+        @include pad{
+            margin-bottom: 53px;
+        }
+    }
+    @include pad{
+        width: 48.21%;
+    }
+    @include phone{
+        width: 100%;
+        &:nth-of-type(n+4){
+            display: none;
+        }
+        &:nth-of-type(3){
+            margin-bottom: 40px;
+        }
+    }
+}
+.sunglasses-model{
+    width: 80%;
+    margin-bottom: 0;
+    @include pad{
+        width: 60%;
+    }
+    @include phone{
+        width: 70%;
+    }
+}
+.sunglasses-price{
+    width: 90%;
+    margin-bottom: 4px;
+    @include pad{
+        width: auto;
+    }
+}
+.picture-pc{
+    @include pad{
+        display: none;
+    }
+    @include phone{
+        display: block;
+    }
+}
+.picture-pad{
+    display: none;
+    @include pad{
+        display: block;
+    }
+    @include phone{
+        display: none;
+    }
+}

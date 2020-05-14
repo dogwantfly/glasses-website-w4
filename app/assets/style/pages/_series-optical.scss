@@ -1,0 +1,265 @@
+//系列鏡框選單
+.series-menu{
+    @include iPhoneSE{
+        top: 50px;
+        position: relative;
+    }
+}
+.series-menu-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    @include pad{
+        max-width: 100%;
+    }
+
+}
+.series-menu-list{
+    display: flex;
+    @include iPhoneSE{
+        display: block;
+    }
+}
+.series-menu-list__item{
+    border-left: 1px solid #dcdcdc;
+    width: 33.33%;
+    font-family: Roboto , sans-serif;
+    &:first-child a{
+        border-bottom: 16px solid $color-primary;
+        @include pad{
+            border-bottom: 8px solid $color-primary;
+        }
+        @include phone{
+            border-bottom: 4px solid $color-primary;
+        }
+    }
+    &:last-child{
+        border-right: 1px solid #dcdcdc;
+    }
+    
+    a{
+        font-size: 42px;
+        color: #000;
+        padding: 24px 0 8px 0;
+        border-bottom: 16px solid transparent;
+        &:hover{
+            border-bottom: 16px solid $color-primary;
+            @include pad{
+                border-bottom: 8px solid $color-primary;
+            }
+            @include phone{
+                border-bottom: 4px solid $color-primary;
+            }
+        }
+        @include pad{
+            font-size: 28px;
+            border-bottom: 8px solid transparent;
+            padding-top:16px;
+            
+        }
+        @include phone{
+            font-size: 14px;
+            padding: 8px 0 4px 0;
+            border-bottom: 4px solid transparent;
+            line-height: 19px;
+        }
+        
+    }
+    .icon-sm{
+        display: none;
+        margin-right: 4px;
+        @include phone{
+            display: block;
+        }
+    }
+    .icon-md{
+        display: none;
+        margin-right: 8px;
+        @include pad{
+            display: block;
+        }
+        @include phone{
+            display: none;
+        }
+    }
+    .icon-lg{
+        margin-right: 8px;
+        @include pad{
+            display: none;
+        }
+    }
+    @include phone{
+        margin-top: 50px;
+    }
+    @include iPhoneSE{
+        width: 100%;
+        margin-top: 0;
+        border-bottom: 1px solid #dcdcdc;
+
+    }
+}
+//系統鏡框 banner
+.series-banner{
+    @include iPhoneSE{
+        margin-top: 50px;
+    }
+}
+.photo{
+    width: 49.375%;
+    height: 309px;
+    background-image: url('./../img/banner-1.png');
+    background-size: cover;   
+    background-position: center center;
+    margin-right: 24px;
+    &:last-child{
+        margin-right: 0;
+        background-image: url('./../img/banner-2.png');
+    }
+    @include pad{
+        width: 50%;
+        margin-right: 0;
+        background-position: center 0;
+    }
+    @include phone{
+        height: 144px;
+    }
+}
+//系列鏡框 產品列表
+.optical-products{
+    padding-top: 88px;
+    padding-bottom: 156px;
+    @include pad{
+        padding-top: 40px;
+        padding-bottom: 104px;
+    }
+    @include phone{
+        padding-top: 24px;
+        padding-bottom: 56px;
+    }
+}
+.series-product-title{
+    font-size: 42px;
+    font-family: Roboto , sans-serif;
+    @include pad{
+        font-size: 32px;
+    }
+    @include phone{
+        font-size: 20px;
+    }
+}
+.series-product-subtitle{
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 48px;
+    @include pad{
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+    @include phone{
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+}
+.series-product-list__item{
+    width: 23.5%;
+    margin-bottom: 104px;
+    &:nth-last-of-type(4){
+        margin-bottom: 88px;
+        @include pad{
+            margin-bottom: 72px;
+        }
+        @include phone{
+            margin-bottom: 32px;
+        }
+    }
+    &:nth-last-of-type(3){
+        margin-bottom: 88px;
+        @include pad{
+            margin-bottom: 72px;
+        }
+        @include phone{
+            margin-bottom: 32px;
+        }
+    }
+    &:nth-last-of-type(2){
+        margin-bottom: 88px;
+        @include pad{
+            margin-bottom: 53px;
+        }
+        @include phone{
+            margin-bottom: 32px;
+        }
+    }
+    &:nth-last-of-type(1){
+        margin-bottom: 88px;
+        @include pad{
+            margin-bottom: 53px;
+        }
+        @include phone{
+            margin-bottom: 40px;
+        }
+    }
+    @include pad{
+        width: 48.21%;
+        margin-bottom: 72px;
+        &:nth-of-type(n + 11){
+            display: none;
+        }
+    }
+    @include phone{
+        width: 100%;
+        margin-bottom: 32px;
+        &:nth-of-type(n + 4){
+            display: none;
+        }
+    }
+}
+.picture-lg{
+    @include pad{
+        display: none;
+    }
+}
+.picture-md{
+    display: none;
+    @include pad{
+        display: block;
+    }
+}
+.product-info{
+    font-size: 24px;
+    font-weight: 400;
+    @include phone{
+        font-size: 16px;
+    }
+}
+.model{
+    width: 50%;
+    margin-bottom: 4px;
+    @include pad{
+        margin-bottom: 0;
+    }
+    @include phone{
+        width: 70%;
+    }
+}
+.price{
+    font-family: Roboto,sans-serif;
+    color: $color-primary;
+}
+.color{
+    width: 24px;
+    height: 24px;
+    background-color: #5F3E2D;
+    &:nth-of-type(2){
+        background-color: #B75929;
+        margin-left: 8px;
+        @include phone{
+            margin-left: 5px;
+        }
+    }
+    @include phone{
+        width: 16px;
+        height: 16px;
+    }
+}
+
+

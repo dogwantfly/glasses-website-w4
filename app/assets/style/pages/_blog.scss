@@ -1,0 +1,233 @@
+.blog-menu{
+    background-color: $color-secondary;
+    @include phone{
+        background-color: $color-light;
+        position: relative;
+        top: 50px;
+    }
+}
+.m-menu-blog{
+    display: none;
+    background-color: $color-light;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    border: 1px solid #000;
+    text-align: center;
+    img{
+        display: inline;
+    }
+    @include phone{
+        display: block;
+    }
+}
+
+.m-menu-blog-up{
+    display: none;
+    background-color: $color-light;
+    border: 1px solid #000;
+    text-align: center;
+    left: 0;
+    right: 0;
+    img{
+        display: inline;
+    }
+    @include phone{
+        display: block;
+    }
+}
+.blog-menu-list{
+    display: flex;
+    @include phone{
+        position: absolute;
+        left: 0;
+        top: calc(100% + 28px);
+        width: 100%;
+        max-height: 0px;
+        transition: all 0.8s;
+        overflow: hidden;
+        z-index: 5;
+        display: block;
+
+    }
+    &__item {
+        
+        a{
+            display: block;
+            font-size: 20px;
+            padding: 13px 24px;
+            @include pad{
+                font-size: 16px;
+                padding: 16px;
+            }
+            @include phone{
+                color: #000;
+                border: 1px solid #00000020;
+                text-align: center;
+                background-color: $color-light;
+            }
+            
+            &:hover {
+                background-color: $color-primary;
+                @include phone{
+                    color: $color-primary;
+                    background-color: #dcdcdc;
+                }   
+            }
+        }
+        
+        
+    }
+}
+.blog-menu-list.active{
+    max-height: 265px;
+    transform: translateY(-28px);
+   
+
+}
+
+.blog-menu-list.close{
+    max-height: 0;
+    transform: translateY(28px);
+}
+
+.search{
+    input{
+        border: none;
+    }
+    @include phone{
+        display: none;
+    }
+}
+//部落格內文
+.blog-content{
+    @include phone{
+        padding-top: 78px;
+    }
+
+}
+.article-list{
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        @include pad{
+            margin-bottom: 32px;
+        }
+        @include phone{
+            margin-bottom: 24px;
+        }
+        @include phone{
+            display: block;
+        }
+        &:last-child{
+            margin-bottom: 88px;
+            @include pad{
+                margin-bottom: 52px;
+            }
+            @include phone{
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+.article-picture{
+    width: 49%;
+    @include pad{
+        width: 48.21%;
+    }
+    @include phone{
+        width: 100%;
+    }
+}
+.article-intro{
+    width: 48.75%;
+    position: relative;
+    @include pad{
+        width: 47.91%;
+    }
+    @include phone{
+        width: 100%;
+    }
+}
+.article-name{
+    margin-bottom: 40px;
+    @include pad{
+        margin-bottom: 16px;
+    }
+    
+    span{
+        @include pad{
+            font-size: 14px;
+        }
+    }
+}
+.article-title{
+    width: 80%;
+    font-size: 32px;
+    @include pad{
+        font-size: 20px;
+    }
+    @include phone{
+        font-size: 16px;
+        
+    }
+}
+.article-subtitle{
+    font-size: 20px;
+    @include pad{
+        font-size: 16px;
+    }
+    @include phone{
+        font-size: 14px;
+        
+    }
+}
+.blog-text-pc{
+    font-size: 20px;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 32px;
+    @include pad{
+        display: none;
+    }
+}
+.blog-text-pad{
+    font-size: 14px;
+    font-weight: 300;
+    color: #555;
+    display: none;
+    position: relative;
+    a{
+        color: #555;
+        font-weight: 600;
+        position: absolute;
+        right: 10px;
+        bottom: -20px;
+    }
+    @include pad{
+        display: block;
+
+    }
+    @include phone{
+        display: none;
+    }
+}
+.more-blog{
+    font-weight: 900;
+    color: #000;
+    font-size: 36px;
+    font-family: Roboto,sans-serif;
+    padding-right: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    &:hover img{
+        transform: translateX(10px);
+        transition: all 0.5s;
+    }
+    @include pad{
+        display: none;
+    }
+}

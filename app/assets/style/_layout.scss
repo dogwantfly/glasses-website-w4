@@ -1,0 +1,291 @@
+//header 開始
+.header{
+    background: $color-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 88px;
+    padding-right: 56px;
+    position: relative;
+    z-index: 1;
+    @include pad{
+        padding: 0 48px;
+    }
+    @include phone{
+        padding: 10px 16px;
+        justify-content: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+}
+
+//m- 為 mobile 縮寫
+.m-menu{
+    display: none;
+    color: $color-light;
+    position: absolute;
+    left: 16px;
+    @include phone{
+        display: block;
+    }
+}
+.logo a{
+    display: block;
+    @include hide-text;
+    width: 80px;
+    height: 49px;
+    background-image: url('../img/logo.png');
+    cursor: pointer;
+    @include phone{
+        width: 48px;
+        height: 30px;
+        margin: 0 auto;
+        background-image: url(../img/logo-sm.png);
+    }
+}
+
+.menu{
+    color: $color-light;
+    display: flex;
+    @include phone{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        max-height: 0px;
+        transition: all 0.8s;
+        overflow: hidden;
+        z-index: 5;
+        display: block;
+    }
+}
+.menu.active {
+    max-height: 240px;
+  }
+
+
+.menu a{
+    display: block;
+    color: $color-light;
+    padding: 40px 32px;
+    font-size: 20px;
+    &:hover{
+        background:$color-secondary;
+    }
+    @include pad{
+        padding: 39px 20px;
+    }
+    @include phone{
+        border-top: 1px solid #FFFFFF;
+        background: #AA0601;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 15px 0;
+        box-sizing: border-box;
+    }
+}
+
+
+//footer 開始
+.footer{
+    padding-bottom: 24px;
+    background-color: $color-primary;
+    @include pad{
+        padding-bottom: 40px;
+    }
+    @include phone{
+        padding-top: 24px;
+        padding-bottom: 20px;
+    }
+}
+//f- 為 footer 縮寫
+.f-container{
+    padding: 0 15px;
+    @include phone{
+        padding: 0 ;
+    }
+}
+.bottom-link{
+    @media(max-width: 374px){
+        width: 60%;
+        margin: 0 auto;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+.bottom-menu{
+    display: flex;
+    a{
+        padding: 32px 24px;
+        padding-top: 48px;
+        font-size: 16px;
+        @include pad{
+            padding: 40px 20px 24px 20px;
+        }
+    }
+    @include phone{
+        display: none;
+    }
+}
+.contact-icon{
+    
+    margin-right: 12px;
+    @include pad{
+        transform: scale(0.6667); 
+    }
+    @include phone{
+        transform: scale(0.4167);
+        margin-right: 0;
+    }
+}
+.contact-icon-phone{
+    margin-right: 23px;
+    @include pad{
+        margin-right: 12px;
+    }
+    @include phone{
+        margin-right: 0;
+    }
+}
+.media-list{
+    li{
+        margin-left: 32px;
+        margin-top: 36px;
+        @include pad{
+            margin-left: 0;
+            margin-top: 40px;
+        }
+        @include phone{
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+    @include pad{
+
+        img{
+            transform: scale(0.5) translateY(-24px);
+        }
+    }
+    @include phone{
+        transform: translate(0px,-5px);
+        img{
+            transform: scale(0.55) translateY(0);
+        }
+    }
+    
+}
+
+.contact-info{
+    font-size: 36px;
+    font-weight: 400;
+    align-items: center;
+   
+    &:first-child{
+        margin-bottom: 16px;
+        @include pad{
+            margin-bottom: 12px;
+        }
+        @include phone{
+            margin-bottom: 8px;
+            transform: translateX(-5px);
+        }
+        @media (max-width:374px){
+            transform: translateX(10px);
+        }
+    }
+    &:last-child{
+        margin-bottom: 24px;
+        @include pad{
+            transform: translateX(-5px);
+            a{
+                transform: translateX(-5px);
+            }
+        }
+        @include phone{
+            transform: translateX(-12px);
+            a{
+                transform: translateX(-5px);
+            }
+            
+        }
+        @media (max-width:374px){
+            transform: translateX(-20px);
+        }
+    }
+    @include pad{
+        font-size: 20px;
+    }
+    @include phone{
+        font-size: 16px;
+    }
+}
+.bottom-info{
+    border-top: 1px solid $color-light;
+    padding-top: 24px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    @include phone{
+        display: block;
+        padding-top: 16px;
+    }
+    p{
+        margin-left: 38px;
+        @include pad{
+            margin-left: 0;
+        }
+        @include phone{
+            margin-left: 0;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+    }
+}
+
+.copyright{
+    align-items: center;
+}
+//f- 為 footer 縮寫
+.f-logo{
+    @include pad{
+        display: none;
+    }
+    @include phone{
+        display: none;
+    }
+}
+.terms{
+    display: flex;
+    li{
+        margin-left: 62px;
+        &:first-child{
+            margin-left: 0;
+        }
+        @include pad{
+            margin-left: 24px;
+        }
+        @include phone{
+            margin-left: 0;
+            margin-bottom: 8px;
+            &:last-child{
+                margin-bottom: 0;
+                
+            }
+        }
+    }
+    @include phone{
+        display: block;
+    }
+}
+//m- 為 mobile 縮寫
+.m-logo{
+    display: none;
+    @include phone{
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
