@@ -17,10 +17,10 @@
 }
 
 .title-page{
-    font-size: 64px;
+    font-size: $font-size-xxl;
     font-weight: 500;
     @include pad{
-        font-size: 48px;
+        font-size: $font-size-xl;
     }
     @include phone{
         font-size: 28px;
@@ -33,12 +33,12 @@
     }
     @include phone{
         transform: scale(0.4145);
-        margin-left: -12px;
+        margin-left: 0px;
     }
 }
 
 .faq-subtitle{
-    font-size: 32px;
+    font-size: $font-size-lg;
     line-height: 63px;
     margin-bottom: 16px;
     font-weight: 500;
@@ -48,7 +48,7 @@
         line-height: 1.5;
     }
     @include phone{
-        font-size: 20px;
+        font-size: $font-size-sm;
         margin-bottom: 16px;
     }
 }
@@ -110,19 +110,19 @@
     p{
         display: none;
         @include pad{
-            font-size: 14px;
+            font-size: $font-size-xxs;
         }
     }
 }
 
 .question{
-    font-size: 20px;
+    font-size: $font-size-sm;
     line-height: 23px;
     font-weight: 600;
     margin: 22px 0;
     @include pad{
         margin: 16px 0;
-        font-size: 16px;
+        font-size: $font-size-xs;
         line-height: 24px;
     }
 }

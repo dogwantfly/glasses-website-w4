@@ -7,22 +7,26 @@ current: index
 <!-- 部落格選單 -->
 <section class="blog-menu">
     <div class="container d-flex justify-content-between">
-        <a href="#" class="m-menu-blog">
-            <img src="./assets/img/ic_keyboard_arrow_down_24px.svg" alt="blog-dropdown-down icon" class="blog-dropdown-down">
-        </a>
-       
-        <ul class="blog-menu-list">
-            <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">最新消息</a></li>
-            <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">特別企劃</a></li>
-            <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">新品上市</a></li>
-            <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">鏡框小知識</a></li>
-            <a href="#" class="m-menu-blog-up">
-                <img src="./assets/img/ic_keyboard_arrow_up_24px.svg" alt="blog-dropdown-down icon" class="blog-dropdown-down">
+        
+        <nav class="blog-nav">
+            <ul class="blog-menu-list js-blog-menu-list">
+                <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">最新消息</a></li>
+                <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">特別企劃</a></li>
+                <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">新品上市</a></li>
+                <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">鏡框小知識</a></li>
+            </ul>
+            <a href="#" class="mobile-menu-blog">
+                <img src="./assets/img/ic_keyboard_arrow_down_24px.svg" alt="blog-dropdown-down icon" class="blog-dropdown-down">
+                <img src="./assets/img/ic_keyboard_arrow_up_24px.svg" alt="blog-dropdown-down icon" class="blog-dropdown-up">
             </a>
-        </ul>
+        </nav>
+       
         <div class="search d-flex">
             <input type="text" class="search-input">
-            <img src="./assets/img/icon-search.svg" alt="search icon">
+            <a href="#">
+                <img src="./assets/img/icon-search.svg" alt="search icon">
+            </a>
+            
         </div>
     </div>
     

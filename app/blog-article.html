@@ -7,22 +7,23 @@ current: index
 <!-- 部落格選單 -->
 <section class="blog-menu">
     <div class="container d-flex justify-content-between">
-        <a href="#" class="m-menu-blog">
-            <img src="./assets/img/ic_keyboard_arrow_down_24px.svg" alt="blog-dropdown-down icon" class="blog-dropdown-down">
-        </a>
-       
-        <ul class="blog-menu-list">
-            <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">最新消息</a></li>
-            <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">特別企劃</a></li>
-            <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">新品上市</a></li>
-            <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">鏡框小知識</a></li>
-            <a href="#" class="m-menu-blog-up">
-                <img src="./assets/img/ic_keyboard_arrow_up_24px.svg" alt="blog-dropdown-down icon" class="blog-dropdown-down">
+        <nav class="blog-nav">
+            <ul class="blog-menu-list js-blog-menu-list">
+                <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">最新消息</a></li>
+                <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">特別企劃</a></li>
+                <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">新品上市</a></li>
+                <li class="blog-menu-list__item font-weight-bold"><a href="blog.html">鏡框小知識</a></li>
+            </ul>
+            <a href="#" class="mobile-menu-blog d-none d-sm-block">
+                <img src="./assets/img/ic_keyboard_arrow_down_24px.svg" alt="blog-dropdown-down icon" class="blog-dropdown-down">
+                <img src="./assets/img/ic_keyboard_arrow_up_24px.svg" alt="blog-dropdown-down icon" class="blog-dropdown-up">
             </a>
-        </ul>
+        </nav>
         <div class="search d-flex">
             <input type="text" class="search-input">
-            <img src="./assets/img/icon-search.svg" alt="search icon">
+            <a href="#">
+                <img src="./assets/img/icon-search.svg" alt="search icon">
+            </a>
         </div>
     </div>
     
@@ -87,7 +88,7 @@ current: index
                         <a href="#"><img src="./assets/img/logo-facebook.svg" alt="facebook icon"></a>
                         <a href="#"><img src="./assets/img/logo-instagram.svg" alt="instagram icon"></a>
                     </div>
-                    <div class="page-to d-flex justify-content-between">
+                    <div class="page-to d-flex justify-content-between d-sm-block">
                         <a href="blog-article.html" class="previous d-flex">
                             <img src="./assets/img/icon-undo.svg" alt="previous page icon">
                             上一篇：街頭潮人訪問 1
@@ -131,13 +132,13 @@ current: index
             </div>
         </div>
         
-        <div class="article-function-pad">
+        <div class="article-function-pad d-none d-md-block">
             <div class="share d-flex">
                 <span>Share</span>
                 <a href="#"><img src="./assets/img/logo-facebook.svg" alt="facebook icon"></a>
                 <a href="#"><img src="./assets/img/logo-instagram.svg" alt="instagram icon"></a>
             </div>
-            <div class="page-to justify-content-between">
+            <div class="page-to d-flex justify-content-between d-sm-block">
                 <a href="blog-article.html" class="previous d-flex">
                     <img src="./assets/img/icon-undo.svg" alt="previous page icon">
                     上一篇：街頭潮人訪問 1
@@ -149,7 +150,7 @@ current: index
             </div>
         </div>
 
-        <div class="hashtag-phone">
+        <div class="hashtag-phone d-none d-sm-block">
             <h4 class="tags d-flex align-items-center font-weight-bold ">
                 <img src="./assets/img/icon-tag.svg" alt="tag icon" class="tags-img">
                 TAGS

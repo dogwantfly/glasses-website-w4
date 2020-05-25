@@ -10,20 +10,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">	
-  
 </head>
 
 <body>
+    
   <header class="header">
-    <a href="#" class="m-menu">
+    <a href="#" class="mobile-menu d-none d-sm-block">
        <img src="./assets/img/ic_menu_24px.svg" alt="menu">
     </a>
     <h1 class="logo">
-        
-        <a href="index.html">glasses</a>
-        
+        <a href="index.html" class="d-block">glasses</a>
     </h1>
-    <ul class="menu">
+    <ul class="menu d-flex d-sm-block">
         <li><a href="series-optical.html">系列鏡框</a></li>
         <li><a href="location.html">門市據點</a></li>
         <li><a href="blog.html">部落格</a></li>
@@ -37,24 +35,24 @@
         <ul class="series-menu-list">
             <li class="series-menu-list__item  ">
                 <a href="series-optical.html" class="d-flex align-items-center justify-content-center font-weight-medium">
-                    <img src="./assets/img/icon-diamond-black-sm.svg" alt="small black diamond icon" class="icon-sm">
-                    <img src="./assets/img/icon-diamond-black-md.svg" alt="medium black diamond icon" class="icon-md">
+                    <img src="./assets/img/icon-diamond-black-sm.svg" alt="small black diamond icon" class="icon-sm d-none d-sm-block">
+                    <img src="./assets/img/icon-diamond-black-md.svg" alt="medium black diamond icon" class="icon-md d-none d-md-block">
                     <img src="./assets/img/icon-diamond-black.svg" alt="large black diamond icon" class="icon-lg">
                     OPTICAL 
                 </a>
             </li>
             <li class="series-menu-list__item ">
                 <a href="series-sunglasses.html" class="d-flex align-items-center justify-content-center font-weight-medium">
-                    <img src="./assets/img/icon-sun-black-sm.svg" alt="small black sun icon" class="icon-sm">
-                    <img src="./assets/img/icon-sun-black-md.svg" alt="medium black sun icon" class="icon-md">
+                    <img src="./assets/img/icon-sun-black-sm.svg" alt="small black sun icon" class="icon-sm d-none d-sm-block">
+                    <img src="./assets/img/icon-sun-black-md.svg" alt="medium black sun icon" class="icon-md d-none d-md-block">
                     <img src="./assets/img/icon-sun-black.svg" alt="large black sun icon" class="icon-lg">
                     SUNGLASSES
                 </a>
             </li>
             <li class="series-menu-list__item ">
                 <a href="series-functional.html" class="d-flex align-items-center justify-content-center font-weight-medium">
-                    <img src="./assets/img/icon-thunder-black-sm.svg" alt="small black thunder icon" class="icon-sm">
-                    <img src="./assets/img/icon-thunder-black-md.svg" alt="medium black thunder icon" class="icon-md">
+                    <img src="./assets/img/icon-thunder-black-sm.svg" alt="small black thunder icon" class="icon-sm d-none d-sm-block">
+                    <img src="./assets/img/icon-thunder-black-md.svg" alt="medium black thunder icon" class="icon-md d-none d-md-block">
                     <img src="./assets/img/icon-thunder-black.svg" alt="large black thunder icon" class="icon-lg">
                         FUNCTIONAL
                 </a>
@@ -247,10 +245,10 @@
 </section>
 
   <footer class="footer">
-    <div class="container f-container">
-        <div class="bottom-link d-flex justify-content-between">
+    <div class="container footer-container">
+        <div class="footer-link d-flex justify-content-between">
             <div class="">
-                <ul class="menu bottom-menu">
+                <ul class="menu footer-menu">
                     <li><a href="index.html">首頁</a></li>
                     <li><a href="series-optical.html">系列鏡框</a></li>
                     <li><a href="#">門市據點</a></li>
@@ -280,25 +278,33 @@
                 </li>
             </ul>
         </div>
-        <div class="bottom-info justify-content-between">
+        <div class="footer-copyright d-flex justify-content-between d-sm-block">
             <div class="copyright d-flex">
-                <h2 class="logo f-logo">
-                    <a href="index.html">glasses</a>
+                <h2 class="logo footer-logo">
+                    <a href="index.html" class="d-block">glasses</a>
                 </h2>
                 <p class="color-text-light">Copyright © 2020 Glasses.All rights reserved.</p>    
             </div>
-            <ul class="terms">
+            <ul class="terms d-flex d-sm-block">
                 <li><a href="#">隱私權政策</a></li>
                 <li><a href="#">服務條款</a></li>
             </ul>
-            <div class="m-logo">
+            <div class="mobile-logo d-none d-sm-block">
                 <h2 class="logo">
-                     <a href="index.html">glasses</a>
+                     <a href="index.html" class="d-block">glasses</a>
                 </h2>
             </div>
         </div>
     </div>
   </footer>
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
+  <!-- js -->
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
 </body>

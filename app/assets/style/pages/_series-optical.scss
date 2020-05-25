@@ -57,7 +57,7 @@
             
         }
         @include phone{
-            font-size: 14px;
+            font-size: $font-size-xxs;
             padding: 8px 0 4px 0;
             border-bottom: 4px solid transparent;
             line-height: 19px;
@@ -65,18 +65,10 @@
         
     }
     .icon-sm{
-        display: none;
         margin-right: 4px;
-        @include phone{
-            display: block;
-        }
     }
     .icon-md{
-        display: none;
         margin-right: 8px;
-        @include pad{
-            display: block;
-        }
         @include phone{
             display: none;
         }
@@ -140,22 +132,22 @@
     font-size: 42px;
     font-family: Roboto , sans-serif;
     @include pad{
-        font-size: 32px;
+        font-size: $font-size-lg;
     }
     @include phone{
         font-size: 20px;
     }
 }
 .series-product-subtitle{
-    font-size: 32px;
+    font-size: $font-size-lg;
     font-weight: 300;
     margin-bottom: 48px;
     @include pad{
-        font-size: 24px;
+        font-size: $font-size-md;
         margin-bottom: 32px;
     }
     @include phone{
-        font-size: 16px;
+        font-size: $font-size-xs;
         margin-bottom: 16px;
     }
 }
@@ -225,10 +217,10 @@
     }
 }
 .product-info{
-    font-size: 24px;
+    font-size: $font-size-md;
     font-weight: 400;
     @include phone{
-        font-size: 16px;
+        font-size: $font-size-xs;
     }
 }
 .model{

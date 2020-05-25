@@ -6,41 +6,47 @@
         top: 50px;
     }
 }
-.m-menu-blog{
+.blog-nav{
+    @include phone{
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        height: 0;
+        &.active{
+            height: 100%;
+        }
+    }
+    
+}
+.mobile-menu-blog{
     display: none;
     background-color: $color-light;
-    position: fixed;
-    z-index: 5;
-    left: 0;
-    right: 0;
     border: 1px solid #000;
-    text-align: center;
-    img{
-        display: inline;
-    }
     @include phone{
-        display: block;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .blog-dropdown-up{
+        display: none;
+    }
+    &.active{
+        .blog-dropdown-down{
+            display: none;
+        }
+        .blog-dropdown-up{
+            display: block;
+        }
     }
 }
 
-.m-menu-blog-up{
-    display: none;
-    background-color: $color-light;
-    border: 1px solid #000;
-    text-align: center;
-    left: 0;
-    right: 0;
-    img{
-        display: inline;
-    }
-    @include phone{
-        display: block;
-    }
-}
+
 .blog-menu-list{
     display: flex;
+    max-height: 0;
     @include phone{
-        position: absolute;
+   
         left: 0;
         top: calc(100% + 28px);
         width: 100%;
@@ -56,10 +62,10 @@
         a{
             display: block;
             font-size: 20px;
-            padding: 13px 24px;
+            padding: 11px 24px;
             @include pad{
-                font-size: 16px;
-                padding: 16px;
+                font-size: $font-size-xs;
+                padding: 14px 16px;
             }
             @include phone{
                 color: #000;
@@ -80,16 +86,9 @@
         
     }
 }
+
 .blog-menu-list.active{
     max-height: 265px;
-    transform: translateY(-28px);
-   
-
-}
-
-.blog-menu-list.close{
-    max-height: 0;
-    transform: translateY(28px);
 }
 
 .search{
@@ -99,11 +98,15 @@
     @include phone{
         display: none;
     }
+    a{
+        
+        padding: 16px ;
+    }
 }
 //部落格內文
 .blog-content{
     @include phone{
-        padding-top: 78px;
+        padding-top: 100px;
     }
 
 }
@@ -159,28 +162,28 @@
     
     span{
         @include pad{
-            font-size: 14px;
+            font-size: $font-size-xxs;
         }
     }
 }
 .article-title{
     width: 80%;
-    font-size: 32px;
+    font-size: $font-size-lg;
     @include pad{
         font-size: 20px;
     }
     @include phone{
-        font-size: 16px;
+        font-size: $font-size-xs
         
     }
 }
 .article-subtitle{
     font-size: 20px;
     @include pad{
-        font-size: 16px;
+        font-size: $font-size-xs;
     }
     @include phone{
-        font-size: 14px;
+        font-size: $font-size-xxs;
         
     }
 }
@@ -194,7 +197,7 @@
     }
 }
 .blog-text-pad{
-    font-size: 14px;
+    font-size: $font-size-xxs;
     font-weight: 300;
     color: #555;
     display: none;

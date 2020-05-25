@@ -26,7 +26,7 @@
     margin-right: 32px;
     margin-bottom: 16px;
     @include pad{
-        font-size: 14px;
+        font-size: $font-size-xxs;
         margin-bottom: 8px;
     }
     @include phone{
@@ -34,7 +34,7 @@
     }
     a{
         @include pad{
-            font-size: 14px;
+            font-size: $font-size-xxs;
         }
     }
     &:first-child::before{
@@ -60,16 +60,16 @@
 .article-tag {
     a{
         color: $color-primary;
-        font-size: 24px;
+        font-size: $font-size-md;
         font-weight: bold;
         
         margin-right: 16px;
         font-family: Roboto , sans-serif;
         @include pad{
-            font-size: 16px;
+            font-size: $font-size-xs;
         }
         @include phone{
-            font-size: 14px;
+            font-size: $font-size-xxs;
             margin-right: 8px;
         }
     }
@@ -93,7 +93,7 @@
     span{
         color: #6C6C6C;
         @include pad{
-            font-size: 14px;
+            font-size: $font-size-xxs;
         }
     }
     @include phone{
@@ -101,11 +101,11 @@
     }
 }
 .article-content-title{
-    font-size: 48px;
+    font-size: $font-size-xl;
     width:100%;
     margin-bottom: 4px;
     @include pad{
-        font-size: 32px;
+        font-size: $font-size-lg;
         margin-bottom: 0;
     }
     @include phone{
@@ -116,10 +116,10 @@
 .article-content-subtitle{
     font-size: 28px;
     @include pad{
-        font-size: 16px;
+        font-size: $font-size-xs;
     }
     @include phone{
-        font-size: 14px;
+        font-size: $font-size-xxs;
     }
 }
 .article-content-picture{
@@ -146,10 +146,6 @@
     }
 }
 .article-function-pad{
-    display: none;
-    @include pad{
-        display: block;
-    }
     @include phone{
         margin-top: 32px;
     }
@@ -167,12 +163,6 @@
         margin-right: 16px;
     }
 
-}
-.page-to{
-    display: flex;
-    @include phone{
-        display: block;
-    }
 }
 .previous{
     color: #000;
@@ -225,8 +215,7 @@
 }
 .tags-tag{
     font-family: Roboto,sans-serif;
-    
-    font-size: 24px;
+    font-size: $font-size-md;
     li{
         margin-right: 24px;
         &:last-child{
@@ -238,18 +227,8 @@
     }
     a{
         color: $color-primary;
-        
-        
         @include pad{
-            font-size: 16px;
+            font-size: $font-size-xs;
         }
-        
-    }
-
-}
-.hashtag-phone{
-    display: none;
-    @include phone{
-        display: block;
     }
 }
